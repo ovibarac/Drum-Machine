@@ -1,0 +1,59 @@
+$padWidth: 90px;
+$padHeight: 80px;
+$background: #121212;
+$secondary: #181818;
+$card: #404040;
+$text: #fff;
+$secondaryText: #b3b3b3;
+$shadowCard: 1px 1px 10px 2px darken($card, 20%);
+$shadowSec: 1px 1px 10px 2px darken($secondary, 20%);
+$accent: #018786;
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body{
+  font-family: Russo One;
+  background-color: $background;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  color: white;
+  
+  #drum-machine{
+    padding: 20px;
+    background-color: $card;
+    border: 2px solid $accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 600px;
+    margin-top: 100px;
+    
+    .drum-pad{
+      width: $padWidth;
+      height: $padHeight;
+      padding-top: 30px;
+      border-radius: 5px;
+    }
+    
+    #text-box{
+      margin-left: 20px;
+      text-align: center;
+      align-items: center;
+      
+      
+      #display{
+        padding-top: 5px;
+        width: 200px;
+        background-color: $secondary;
+        color: $secondaryText;
+        margin: auto;
+        box-shadow: 2px 2px 2px darken($card, 20%);
+      }
+    }
+  }
+}
+@media screen and (max-width: 650) {
+  #drum-machine {
+    transform: scale(0.5);
+  }
+}
